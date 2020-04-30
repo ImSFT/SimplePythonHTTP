@@ -12,4 +12,4 @@
         dest: ~/PyHTTP
   - name: Start Web SARVAR
     script:
-        cmd: ~/PyHTTP/SimpleHttp.py
+        command: python3 ~/PyHTTP/SimpleHttp.py
