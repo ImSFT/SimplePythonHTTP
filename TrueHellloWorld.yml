@@ -11,8 +11,4 @@
         repo: 'https://github.com/ImSFT/SimplePythonHTTP.git'
         dest: /home/isft/PyHTTP
   - name: Start Web SARVAR
-    command: /home/isft/PyHTTP/SimpleHttp.py
-    async: 1000
-    poll: 0
-  - name: test 6669 port
-    shell: ss -l | grep 6669
+    script: /home/isft/PyHTTP/SimpleHttp.py
