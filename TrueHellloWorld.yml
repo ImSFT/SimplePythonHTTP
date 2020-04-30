@@ -2,6 +2,9 @@
   hosts: test
   tasks:
     - name: Hello Message
+      debug:
+        msg: "Hello World!"
+    - name: GitClone
       git: >
       repo=git@github.com:ImSFT/SimplePythonHTTP.git
       dest=~/
