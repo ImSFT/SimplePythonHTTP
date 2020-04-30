@@ -4,11 +4,11 @@
   tasks:
   - name: Creates directory
     file:
-        path: /home/isft/PyHTTP
+        path: ~/PyHTTP
         state: directory
   - name: Checkout The Code From Github Using Ansible.
     git:
         repo: 'https://github.com/ImSFT/SimplePythonHTTP.git'
-        dest: /home/isft/PyHTTP
+        dest: ~/PyHTTP
   - name: Start Web SARVAR
-    command: /home/isft/PyHTTP/SimpleHttp.py
+    command: ~/PyHTTP/SimpleHttp.py
