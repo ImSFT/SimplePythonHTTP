@@ -9,8 +9,9 @@
     file:
         path: /home/isft/PyHTTP
         state: directory
-  - git:
-        repo: ssh://git@github.com:ImSFT/SimplePythonHTTP.git
+  - name: Checkout The Code From Github Using Ansible.
+    git:
+        repo: 'https://github.com/ImSFT/SimplePythonHTTP.git'
         dest: /home/isft/PyHTTP
   - name: Start Web SARVAR
     script: /home/isft/PyHTTP/SimpleHttp.py
