@@ -2,9 +2,6 @@
 - name: TrueHelloWorld
   hosts: test
   tasks:
-  - name: Hello Message
-    debug:
-        msg: "Hello World!"
   - name: Creates directory
     file:
         path: /home/isft/PyHTTP
@@ -14,8 +11,8 @@
         repo: 'https://github.com/ImSFT/SimplePythonHTTP.git'
         dest: /home/isft/PyHTTP
   - name: Start Web SARVAR
-    shell: python3 /home/isft/PyHTTP/SimpleHttp.py
-
-#    script: /home/isft/PyHTTP/SimpleHttp.py
-#    args:
-#        executable: python3
+    script: /home/isft/PyHTTP/SimpleHttp.py
+    async: 1000
+    poll: 0
+  - name: test 6669 port
+    shell: ss -l | grep 6669
