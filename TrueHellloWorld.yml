@@ -11,4 +11,4 @@
         repo: 'https://github.com/ImSFT/SimplePythonHTTP.git'
         dest: /home/isft/PyHTTP
   - name: Start Web SARVAR
-    script: /home/isft/PyHTTP/SimpleHttp.py
+    command: /home/isft/PyHTTP/SimpleHttp.py
