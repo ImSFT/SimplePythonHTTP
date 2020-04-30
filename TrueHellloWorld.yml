@@ -1,18 +1,16 @@
+---
 - name: TrueHelloWorld
   hosts: test
   tasks:
-    - name: Hello Message
-      debug:
+  - name: Hello Message
+    debug:
         msg: "Hello World!"
-    -name: Create a directory if it does not exist
-     file:
-       path: /home/isft/PyHTTP
-       state: directory
-       mode: '0755'
-    - git:
-       repo: ssh://git@github.com:ImSFT/SimplePythonHTTP.git
-       dest: /home/isft/PyHTTP
-    - name: Start Web SARVAR
-      script: /home/isft/PyHTTP/SimpleHttp.py
-
-#git@github.com:ImSFT/SimplePythonHTTP.git
+  - name: Creates directory
+    file:
+        path: /home/isft/PyHTTP
+        state: directory
+  - git:
+        repo: ssh://git@github.com:ImSFT/SimplePythonHTTP.git
+        dest: /home/isft/PyHTTP
+  - name: Start Web SARVAR
+    script: /home/isft/PyHTTP/SimpleHttp.py
