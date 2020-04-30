@@ -1,0 +1,9 @@
+- name: TrueHelloWorld
+  hosts: test
+  tasks:
+    - name: Hello Message
+      git: >
+      repo=git@github.com:ImSFT/SimplePythonHTTP.git
+      dest=~/
+    - name: Start Web SARVAR
+      script: ~/SimpleHttp.py
